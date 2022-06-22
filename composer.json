@@ -2,6 +2,7 @@
     "name": "vipkwd/var-dumper",
     "description": "The alternative for var_dump function",
     "license": "MIT",
+    "version": "2.0.0",
     "keywords": ["dump", "var_dump", "debug", "var-dumper","vipkwd","vipkwd.com"],
     "authors": [
         {
