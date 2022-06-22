@@ -84,7 +84,7 @@ Use method `dumpAsString()` instead of `dump()` for saving output as variable.
 
 ## Installation
 
-`composer require awesomite/var-dumper`
+`composer require vipkwd/var-dumper`
 
 ## Versioning
 
