@@ -1,12 +1,16 @@
 {
-    "name": "awesomite/var-dumper",
+    "name": "vipkwd/var-dumper",
     "description": "The alternative for var_dump function",
     "license": "MIT",
-    "keywords": ["dump", "var_dump", "debug", "var-dumper"],
+    "keywords": ["dump", "var_dump", "debug", "var-dumper","vipkwd","vipkwd.com"],
     "authors": [
         {
             "name": "Bartłomiej Krukowski",
             "email": "bartlomiej@krukowski.me"
+        },
+        {
+            "name": "vipkwd",
+            "email": "service~vipkwd.com"
         }
     ],
     "autoload": {
@@ -21,7 +25,7 @@
     },
     "prefer-stable": true,
     "require": {
-        "php": "^7.1",
+        "php": ">=7.1",
         "symfony/polyfill-mbstring": "^1.6"
     },
     "require-dev": {
