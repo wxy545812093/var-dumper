@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\LightVarDumperProviders;
+namespace Vipkwd\VarDumper\LightVarDumperProviders;
 
-use Awesomite\VarDumper\LightVarDumper;
-use Awesomite\VarDumper\Objects\HasherFactory;
+use Vipkwd\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\Objects\HasherFactory;
 
 /**
  * @internal
@@ -62,12 +62,12 @@ final class ProviderDump implements \IteratorAggregate
         $hasher = HasherFactory::create();
 
         $arrayObject = new \ArrayObject();
-        $arrayObject['awesomite.varDumper'] = true;
+        $arrayObject['vipkwd.varDumper'] = true;
 
         $arrayObjectDump
             = <<<DUMP
 object(ArrayObject) #{$hasher->getHashId($arrayObject)} (3) {
-    private \$storage =>       array(1) {[awesomite.varDumper] => true}
+    private \$storage =>       array(1) {[vipkwd.varDumper] => true}
     private \$flags =>         0
     private \$iteratorClass => “ArrayIterator”
 }
@@ -82,13 +82,13 @@ DUMP;
         $hasher = HasherFactory::create();
 
         $testArrayObject = new TestArrayObject();
-        $testArrayObject['awesomite.varDumper'] = true;
+        $testArrayObject['vipkwd.varDumper'] = true;
 
         $testArrayObjectDump
             = <<<DUMP
-object(Awesomite\VarDumper\LightVarDumperProviders\TestArrayObject) #{$hasher->getHashId($testArrayObject)} (4) {
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestArrayObject) #{$hasher->getHashId($testArrayObject)} (4) {
     private \$privateProperty => “private value”
-    private \$storage =>         array(1) {[awesomite.varDumper] => true}
+    private \$storage =>         array(1) {[vipkwd.varDumper] => true}
     private \$flags =>           0
     private \$iteratorClass =>   “ArrayIterator”
 }
@@ -108,7 +108,7 @@ DUMP;
 
         $testArrayObjectDump2
             = <<<DUMP
-object(Awesomite\VarDumper\LightVarDumperProviders\TestArrayObject) #{$hasher->getHashId($testArrayObject2)} (4) {
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestArrayObject) #{$hasher->getHashId($testArrayObject2)} (4) {
     private \$privateProperty => “private value”
     private \$storage =>
         array(2) {
@@ -132,11 +132,11 @@ DUMP;
         $dump
             = <<<'DUMP'
 object(Closure) #%digit% {[
-    [name] =>              “Awesomite\VarDumper\LightVarDumperProviders\{closure}”
+    [name] =>              “Vipkwd\VarDumper\LightVarDumperProviders\{closure}”
     [filename] =>          “(...)/tests/LightVarDumperProviders/ProviderDump.php”
     [startLine] =>         %digit%
     [endLine] =>           %digit%
-    [closureScopeClass] => “Awesomite\VarDumper\LightVarDumperProviders\ProviderDump”
+    [closureScopeClass] => “Vipkwd\VarDumper\LightVarDumperProviders\ProviderDump”
 ]}
 
 DUMP;
@@ -159,9 +159,9 @@ DUMP;
 
         $expected
             = <<<'EXPECTED'
-object(Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (2) {[
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (2) {[
     [greeting] => “hello world”
-    [class] =>    “Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo”
+    [class] =>    “Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo”
 ]}
 
 EXPECTED;
@@ -179,7 +179,7 @@ EXPECTED;
 
         $expected
             = <<<'EXPECTED'
-object(Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (4) {[
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (4) {[
     [0] => 1
     [1] => 2.5
     [2] => NULL
@@ -201,7 +201,7 @@ EXPECTED;
 
         $expected
             = <<<'EXPECTED'
-object(Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (0) {[]}
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (0) {[]}
 
 EXPECTED;
 
@@ -268,7 +268,7 @@ EXPECTED;
 
         $expected
             = <<<'EXPECTED'
-object(Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (1) {
+object(Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo) #%d (1) {
     private $data => “hello world”
 }
 

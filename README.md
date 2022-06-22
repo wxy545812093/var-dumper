@@ -1,8 +1,8 @@
 # VarDumper
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d527bfe23e64501a659c7bff1ce00db)](https://www.codacy.com/app/awesomite/var-dumper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=awesomite/var-dumper&amp;utm_campaign=Badge_Grade)
-[![Coverage Status](https://coveralls.io/repos/github/awesomite/var-dumper/badge.svg?branch=master)](https://coveralls.io/github/awesomite/var-dumper?branch=master)
-[![Build Status](https://travis-ci.org/awesomite/var-dumper.svg?branch=master)](https://travis-ci.org/awesomite/var-dumper)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2d527bfe23e64501a659c7bff1ce00db)](https://www.codacy.com/app/vipkwd/var-dumper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vipkwd/var-dumper&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/vipkwd/var-dumper/badge.svg?branch=master)](https://coveralls.io/github/vipkwd/var-dumper?branch=master)
+[![Build Status](https://travis-ci.org/vipkwd/var-dumper.svg?branch=master)](https://travis-ci.org/vipkwd/var-dumper)
 
 ## Why?
 
@@ -13,7 +13,7 @@ To set limit size of printed variable and produce more readable output than buil
 ```php
 <?php
 
-use Awesomite\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\LightVarDumper;
 
 $loremIpsum = <<<'LOREM_IPSUM'
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus.
@@ -82,7 +82,7 @@ Use method `dumpAsString()` instead of `dump()` for saving output as variable.
 
 ## Installation
 
-`composer require awesomite/var-dumper`
+`composer require vipkwd/var-dumper`
 
 ## Examples
 
@@ -118,7 +118,7 @@ object(DivideByZeroException) #4 {[
 ```php
 <?php
 
-use Awesomite\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\LightVarDumper;
 
 $dumper = new LightVarDumper();
 $dumper->dump(\range(1, 5));
@@ -135,7 +135,7 @@ array(5) {1, 2, 3, 4, 5}
 ```php
 <?php
 
-use Awesomite\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\LightVarDumper;
 
 $firstName = 'Mary';
 $lastName = 'Watson';
@@ -167,7 +167,7 @@ object(Closure) #3 {[
 ```php
 <?php
 
-use Awesomite\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\LightVarDumper;
 
 $dumper = new LightVarDumper();
 $dumper->dump(array(

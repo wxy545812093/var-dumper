@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\LightVarDumperProviders;
+namespace Vipkwd\VarDumper\LightVarDumperProviders;
 
-use Awesomite\VarDumper\LightVarDumper;
-use Awesomite\VarDumper\Objects\HasherFactory;
+use Vipkwd\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\Objects\HasherFactory;
 
 /**
  * @internal
@@ -218,11 +218,11 @@ object(RangeException) #{$objectId} {[
     [file] =>     “(...)/ProviderExceptions.php:170”
     [previous] => NULL
     [trace] =>
-        1. (...)/ProviderExceptions.php:175 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace6()
-        2. (...)/ProviderExceptions.php:180 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace5(
+        1. (...)/ProviderExceptions.php:175 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace6()
+        2. (...)/ProviderExceptions.php:180 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace5(
             hello: “hello”
         )
-        3. (...)/ProviderExceptions.php:185 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace4(
+        3. (...)/ProviderExceptions.php:185 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace4(
             a: 1
             b: 2
             c: 3
@@ -231,7 +231,7 @@ object(RangeException) #{$objectId} {[
             f: 6
             (...)
         )
-        4. (...)/ProviderExceptions.php:190 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace3(
+        4. (...)/ProviderExceptions.php:190 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace3(
             arg1: “first undefined parameter”
             arg2: “second undefined parameter”
             arg3:
@@ -240,11 +240,11 @@ object(RangeException) #{$objectId} {[
                     › undefined↵
                     › parameter
         )
-        5. (...)/ProviderExceptions.php:197 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace2(
+        5. (...)/ProviderExceptions.php:197 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->createExceptionWithStackTrace2(
             mathArray: array(2) {M_PI, M_PI_2}
             arg2:      NULL
         )
-        6. (...)/ProviderExceptions.php:200 Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->Awesomite\VarDumper\LightVarDumperProviders\{closure}()
+        6. (...)/ProviderExceptions.php:200 Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->Vipkwd\VarDumper\LightVarDumperProviders\{closure}()
         (...)
 ]}
 

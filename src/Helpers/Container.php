@@ -1,20 +1,20 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\Helpers;
+namespace Vipkwd\VarDumper\Helpers;
 
-use Awesomite\VarDumper\Config\AbstractConfig;
-use Awesomite\VarDumper\Objects\HasherFactory;
-use Awesomite\VarDumper\Objects\HasherInterface;
-use Awesomite\VarDumper\Subdumpers\SubdumpersCollection;
+use Vipkwd\VarDumper\Config\AbstractConfig;
+use Vipkwd\VarDumper\Objects\HasherFactory;
+use Vipkwd\VarDumper\Objects\HasherInterface;
+use Vipkwd\VarDumper\Subdumpers\SubdumpersCollection;
 
 /**
  * @internal

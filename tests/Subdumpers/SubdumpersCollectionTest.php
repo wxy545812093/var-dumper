@@ -1,20 +1,20 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\Subdumpers;
+namespace Vipkwd\VarDumper\Subdumpers;
 
-use Awesomite\VarDumper\BaseTestCase;
-use Awesomite\VarDumper\Config\AbstractConfig;
-use Awesomite\VarDumper\Helpers\Container;
-use Awesomite\VarDumper\Strings\LinePart;
+use Vipkwd\VarDumper\BaseTestCase;
+use Vipkwd\VarDumper\Config\AbstractConfig;
+use Vipkwd\VarDumper\Helpers\Container;
+use Vipkwd\VarDumper\Strings\LinePart;
 
 /**
  * @internal
@@ -91,7 +91,7 @@ final class SubdumpersCollectionTest extends BaseTestCase
      */
     private function createSubdumperMock()
     {
-        return $this->getMockBuilder('Awesomite\VarDumper\Subdumpers\SubdumperInterface')->getMock();
+        return $this->getMockBuilder('Vipkwd\VarDumper\Subdumpers\SubdumperInterface')->getMock();
     }
 
     /**
@@ -110,7 +110,7 @@ final class SubdumpersCollectionTest extends BaseTestCase
      */
     private function createConfigMock()
     {
-        return $this->getMockBuilder('Awesomite\VarDumper\Config\AbstractConfig')
+        return $this->getMockBuilder('Vipkwd\VarDumper\Config\AbstractConfig')
             ->disableOriginalConstructor()
             ->getMock();
     }

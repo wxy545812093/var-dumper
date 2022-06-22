@@ -1,17 +1,17 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\Subdumpers;
+namespace Vipkwd\VarDumper\Subdumpers;
 
-use Awesomite\VarDumper\Strings\PartInterface;
+use Vipkwd\VarDumper\Strings\PartInterface;
 
 /**
  * @internal

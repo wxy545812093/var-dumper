@@ -89,9 +89,9 @@ install:
       export PHP_CS_FIXER="./dev-tools/vendor/bin/php-cs-fixer";
       export RUN_CS_FIXER="true";
     fi
-  # https://travis-ci.org/awesomite/var-dumper/jobs/428682342
+  # https://travis-ci.org/vipkwd/var-dumper/jobs/428682342
   # Warning: ini_get_all() expects parameter 1 to be string,
-  # null given in /home/travis/build/awesomite/var-dumper/vendor/phpunit/phpunit/src/Util/GlobalState.php on line 79
+  # null given in /home/travis/build/vipkwd/var-dumper/vendor/phpunit/phpunit/src/Util/GlobalState.php on line 79
   - |
     if [[ ${TRAVIS_PHP_VERSION:0:4} == "hhvm" ]]; then
       export PHPUNIT_ARGS="--exclude-group=syntax-test --no-coverage";

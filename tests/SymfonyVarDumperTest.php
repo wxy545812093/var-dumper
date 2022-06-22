@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper;
+namespace Vipkwd\VarDumper;
 
 use Symfony\Component\VarDumper\Cloner\ClonerInterface;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
@@ -30,7 +30,7 @@ final class SymfonyVarDumperTest extends BaseTestCase
     public function testAll($var, CliDumper $dumper = null, ClonerInterface $cloner = null)
     {
         if (\version_compare(\PHP_VERSION, '7.4') >= 0 && 'high' === \getenv('DEPENDENCIES')) {
-            // https://travis-ci.org/awesomite/var-dumper/jobs/612654461
+            // https://travis-ci.org/vipkwd/var-dumper/jobs/612654461
             $this->markTestSkipped('Function ReflectionType::__toString() is deprecated');
         }
 

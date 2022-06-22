@@ -24,8 +24,8 @@ object(Closure) #3 {[
 * Internal refactor, do not call `ob_*` functions
 * Added dedicated dumpers for `Closure` and `Throwable`
 * Added the following methods (default value for both of them is equal to `3`):
-  * `Awesomite\VarDumper\InternalVarDumper::setMaxFileNameDepth`
-  * `Awesomite\VarDumper\LightVarDumper::setMaxFileNameDepth`
+  * `Vipkwd\VarDumper\InternalVarDumper::setMaxFileNameDepth`
+  * `Vipkwd\VarDumper\LightVarDumper::setMaxFileNameDepth`
 
 ## [1.2.1] - 2018-10-01
 
@@ -39,7 +39,7 @@ Added support for `use` keyword in anonymous functions, e.g.:
 ```php
 <?php
 
-use Awesomite\VarDumper\LightVarDumper;
+use Vipkwd\VarDumper\LightVarDumper;
 
 $x = 5;
 $y = 6;
@@ -63,7 +63,7 @@ object(Closure) #1 (5) {
 
 ## [1.1.0] - 2018-09-14
 
-* Added [`Awesomite\VarDumper\SymfonyVarDumper`](./src/SymfonyVarDumper.php)
+* Added [`Vipkwd\VarDumper\SymfonyVarDumper`](./src/SymfonyVarDumper.php)
 * Refactor - all `@internal` classes have been marked as `final` whenever it was possible
 
 ## [1.0.3] - 2018-09-13
@@ -108,14 +108,14 @@ $reflectionProp->getValue($obj);
 
 This version contains the same source code as [0.12.0].
 
-[1.5.0]: https://github.com/awesomite/var-dumper/compare/v1.4.0...v1.5.0
-[1.4.0]: https://github.com/awesomite/var-dumper/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/awesomite/var-dumper/compare/v1.2.1...v1.3.0
-[1.2.1]: https://github.com/awesomite/var-dumper/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/awesomite/var-dumper/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/awesomite/var-dumper/compare/v1.0.3...v1.1.0
-[1.0.3]: https://github.com/awesomite/var-dumper/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/awesomite/var-dumper/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/awesomite/var-dumper/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/awesomite/var-dumper/tree/v1.0.0
-[0.12.0]: https://github.com/awesomite/var-dumper/tree/v0.12.0
+[1.5.0]: https://github.com/wxy545812093/var-dumper/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/wxy545812093/var-dumper/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/wxy545812093/var-dumper/compare/v1.2.1...v1.3.0
+[1.2.1]: https://github.com/wxy545812093/var-dumper/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/wxy545812093/var-dumper/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/wxy545812093/var-dumper/compare/v1.0.3...v1.1.0
+[1.0.3]: https://github.com/wxy545812093/var-dumper/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/wxy545812093/var-dumper/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/wxy545812093/var-dumper/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/wxy545812093/var-dumper/tree/v1.0.0
+[0.12.0]: https://github.com/wxy545812093/var-dumper/tree/v0.12.0

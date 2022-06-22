@@ -1,17 +1,17 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\Properties;
+namespace Vipkwd\VarDumper\Properties;
 
-use Awesomite\VarDumper\BaseTestCase;
+use Vipkwd\VarDumper\BaseTestCase;
 
 /**
  * @internal
@@ -27,7 +27,7 @@ final class PropertiesTest extends BaseTestCase
     {
         $properties = new Properties($object);
         foreach ($properties->getProperties() as $property) {
-            $this->assertInstanceOf('Awesomite\VarDumper\Properties\PropertyInterface', $property);
+            $this->assertInstanceOf('Vipkwd\VarDumper\Properties\PropertyInterface', $property);
         }
     }
 
@@ -135,7 +135,7 @@ final class PropertiesTest extends BaseTestCase
             $this->getClosureDataWithUse(),
         );
 
-        // https://travis-ci.org/awesomite/var-dumper/jobs/240526896
+        // https://travis-ci.org/vipkwd/var-dumper/jobs/240526896
         if (\version_compare(\PHP_VERSION, '7.1') >= 0 && !\defined('HHVM_VERSION')) {
             $result[] = $this->getInternalClosureName();
         }

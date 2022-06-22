@@ -1,32 +1,32 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper;
+namespace Vipkwd\VarDumper;
 
-use Awesomite\VarDumper\Helpers\Container;
-use Awesomite\VarDumper\Helpers\IntValue;
-use Awesomite\VarDumper\Helpers\Strings;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderDump;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderDumpConstants;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderDynamicDump;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderIndent;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderMaxChildren;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderMaxDepth;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderMaxStringLength;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderMultiLine;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderPlaceInCode;
-use Awesomite\VarDumper\LightVarDumperProviders\ProviderRecursive;
-use Awesomite\VarDumper\Subdumpers\NativeDumper;
-use Awesomite\VarDumper\Subdumpers\SubdumpersCollection;
+use Vipkwd\VarDumper\Helpers\Container;
+use Vipkwd\VarDumper\Helpers\IntValue;
+use Vipkwd\VarDumper\Helpers\Strings;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderDump;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderDumpConstants;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderDynamicDump;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderIndent;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderMaxChildren;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderMaxDepth;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderMaxStringLength;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderMultiLine;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderPlaceInCode;
+use Vipkwd\VarDumper\LightVarDumperProviders\ProviderRecursive;
+use Vipkwd\VarDumper\Subdumpers\NativeDumper;
+use Vipkwd\VarDumper\Subdumpers\SubdumpersCollection;
 
 /**
  * @internal
@@ -78,10 +78,10 @@ final class LightVarDumperTest extends BaseTestCase
         /*
          * There are small differences between HHVM and PHP, e.g. name of function for closure:
          *
-         * PHP:   Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->Awesomite\VarDumper\LightVarDumperProviders\{closure}()
+         * PHP:   Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->Vipkwd\VarDumper\LightVarDumperProviders\{closure}()
          * HHVM: {closure}()
          *
-         * https://travis-ci.org/awesomite/var-dumper/jobs/612736181
+         * https://travis-ci.org/vipkwd/var-dumper/jobs/612736181
          */
         if (\defined('HHVM_VERSION')) {
             $this->assertInternalType('string', $dumper->dumpAsString($exception));
@@ -90,10 +90,10 @@ final class LightVarDumperTest extends BaseTestCase
         }
 
         /*
-         * PHP ^5.4:  Awesomite\VarDumper\LightVarDumperProviders\ProviderExceptions->Awesomite\VarDumper\LightVarDumperProviders\{closure}()
-         * PHP 5.3.*: Awesomite\VarDumper\LightVarDumperProviders\{closure}()
+         * PHP ^5.4:  Vipkwd\VarDumper\LightVarDumperProviders\ProviderExceptions->Vipkwd\VarDumper\LightVarDumperProviders\{closure}()
+         * PHP 5.3.*: Vipkwd\VarDumper\LightVarDumperProviders\{closure}()
          *
-         * https://travis-ci.org/awesomite/var-dumper/jobs/612762242
+         * https://travis-ci.org/vipkwd/var-dumper/jobs/612762242
          */
         if (\version_compare(\PHP_VERSION, '5.4') < 0) {
             $regex = '/[a-zA-Z0-9_]+' . \preg_quote('->', '/') . '[a-zA-Z0-9_\\\\]+' . \preg_quote('{closure}()', '/') . '/';
@@ -120,7 +120,7 @@ final class LightVarDumperTest extends BaseTestCase
      * @param          $var
      * @param string[] $lines
      *
-     * @see https://travis-ci.org/awesomite/var-dumper/jobs/462117181
+     * @see https://travis-ci.org/vipkwd/var-dumper/jobs/462117181
      */
     public function testDynamicDump($var, array $lines)
     {
@@ -455,9 +455,9 @@ final class LightVarDumperTest extends BaseTestCase
     private function reinitAllDumpers()
     {
         $classes = array(
-            'Awesomite\VarDumper\Subdumpers\ArrayRecursiveDumper',
-            'Awesomite\VarDumper\Subdumpers\ScalarDumper',
-            'Awesomite\VarDumper\Subdumpers\StringDumper',
+            'Vipkwd\VarDumper\Subdumpers\ArrayRecursiveDumper',
+            'Vipkwd\VarDumper\Subdumpers\ScalarDumper',
+            'Vipkwd\VarDumper\Subdumpers\StringDumper',
         );
         foreach ($classes as $class) {
             $reflectionInit = new \ReflectionProperty($class, 'inited');

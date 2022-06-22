@@ -1,21 +1,21 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper\Subdumpers;
+namespace Vipkwd\VarDumper\Subdumpers;
 
-use Awesomite\VarDumper\Helpers\FileNameDecorator;
-use Awesomite\VarDumper\Strings\LinePart;
-use Awesomite\VarDumper\Strings\PartInterface;
-use Awesomite\VarDumper\Strings\Parts;
-use Awesomite\VarDumper\Subdumpers\Helpers\StackTraceHelper;
+use Vipkwd\VarDumper\Helpers\FileNameDecorator;
+use Vipkwd\VarDumper\Strings\LinePart;
+use Vipkwd\VarDumper\Strings\PartInterface;
+use Vipkwd\VarDumper\Strings\Parts;
+use Vipkwd\VarDumper\Subdumpers\Helpers\StackTraceHelper;
 
 /**
  * @internal

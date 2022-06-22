@@ -1,18 +1,18 @@
 <?php
 
 /*
- * This file is part of the awesomite/var-dumper package.
+ * This file is part of the vipkwd/var-dumper package.
  *
- * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me>
+ * (c) Bartłomiej Krukowski <bartlomiej@krukowski.me> | Vipkkwd <service@vipkwd.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Awesomite\VarDumper;
+namespace Vipkwd\VarDumper;
 
-use Awesomite\VarDumper\LightVarDumperProviders\TestDebugInfo;
-use Awesomite\VarDumper\Properties\ArrayObject;
+use Vipkwd\VarDumper\LightVarDumperProviders\TestDebugInfo;
+use Vipkwd\VarDumper\Properties\ArrayObject;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\CliDumper;
 
