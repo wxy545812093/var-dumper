@@ -22,7 +22,7 @@ final class HasherFactory
     public static function create()
     {
         // Bug in HHVM - spl_object_id returns the same value for 2 different objects
-        // @see https://travis-ci.org/vipkwd/var-dumper/jobs/428063562
+        // @see https://travis-ci.org/awesomite/var-dumper/jobs/428063562
         return \function_exists('spl_object_id') && !\defined('HHVM_VERSION')
             ? new Hasher72()
             : new Hasher();

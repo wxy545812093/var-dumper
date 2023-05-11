@@ -11,7 +11,7 @@
 
 namespace Vipkwd\VarDumper\Subdumpers;
 
-use Vipkwd\Iterators\CallbackIterator;
+use Vipkwd\VarDumper\Iterators\CallbackIterator;
 use Vipkwd\VarDumper\Helpers\Container;
 use Vipkwd\VarDumper\Helpers\Strings;
 use Vipkwd\VarDumper\Helpers\Symbols;

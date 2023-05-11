@@ -2,7 +2,7 @@
     "name": "vipkwd/var-dumper",
     "description": "The alternative for var_dump function",
     "license": "MIT",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "keywords": ["dump", "var_dump", "debug", "var-dumper","vipkwd","vipkwd.com"],
     "authors": [
         {
@@ -28,7 +28,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.0",
-        "awesomite/iterators": "^1.0",
         "symfony/polyfill-mbstring": "^1.6"
     },
     "require-dev": {
